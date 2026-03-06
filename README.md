@@ -1,6 +1,6 @@
-# 🚀 Web Development Experiments (Node.js + MongoDB)
+# 🚀 Backend Web Development Experiments
 
-This repository contains backend experiments implemented using **Node.js, Express.js, MongoDB, and Mongoose**.
+> Academic backend experiments built using Node.js, Express.js, MongoDB, and Mongoose.
 
 ---
 
