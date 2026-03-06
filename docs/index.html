@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Backend Web Development Experiments</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3 {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="content">Loading README...</div>
+
+<script>
+  fetch("https://raw.githubusercontent.com/gautamsinghkgs/Experiment-5/main/README.md")
+    .then(response => response.text())
+    .then(text => {
+      document.getElementById("content").innerHTML = marked.parse(text);
+    })
+    .catch(error => {
+      document.getElementById("content").innerHTML = "Error loading README.";
+    });
+</script>
+
+</body>
+</html>
